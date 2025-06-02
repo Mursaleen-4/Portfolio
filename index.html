@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mursaleen Amanullah - Portfolio</title>
+
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button
+          class="nav-menu d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-4">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Expertise</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Testimonials</a>
+            </li>
+          </ul>
+          <a href="#contact" class="c-btn ms-4 d-none d-lg-block">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- home section starts  -->
+    <section class="home" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2>
+              Hello! I'm <br /><span class="c-orange">Mursaleen Amanullah</span>
+            </h2>
+            <p class="intro-text">
+              A passionate Full Stack Developer & Data Scientist specializing in creating responsive websites, 
+              React applications, and Python development.
+            </p>
+            <div class="key-skills">
+              <div class="skill-tag">Web Development</div>
+              <div class="skill-tag">React.js</div>
+              <div class="skill-tag">Python</div>
+              <div class="skill-tag">Data Science</div>
+            </div>
+            <div class="d-flex gap-3 mt-4">
+              <a href="#contact" class="c-btn">Hire Me</a>
+              <a href="#portfolio" class="c-btn" style="background: transparent; color: var(--primary); border: 2px solid var(--primary);">
+                View Work
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left">
+            <img src="images/me.jpg" class="img-fluid rounded-4 shadow-lg" alt="Profile" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- expertise section starts -->
+    <section class="expertise py-5" id="service">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold">My Expertise</span>
+          <h2 class="mt-2">What I Can Do For You</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+            <div class="service-card">
+              <div class="img">
+                <img src="images/service-icon1.png" alt="Web Development" />
+              </div>
+              <h4>Web Development</h4>
+              <p>
+                Creating beautiful, responsive websites with a focus on user experience 
+                and modern design principles.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="img">
+                <img src="images/React.webp" alt="React Development" />
+              </div>
+              <h4>React Development</h4>
+              <p>
+                Building fast, responsive, and interactive web applications with React 
+                and modern JavaScript.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="img">
+                <img src="images/download.jpeg" alt="Python Development" />
+              </div>
+              <h4>Python Development</h4>
+              <p>
+                Developing robust backend solutions and applications using Python 
+                and its powerful ecosystem.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="img">
+                <img src="images/ds.png" alt="Data Science" />
+              </div>
+              <h4>Data Science</h4>
+              <p>
+                Analyzing data, creating visualizations, and building machine learning 
+                models to drive insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- expertise section ends -->
+
+    <!-- skills section starts -->
+    <section class="skill py-5" id="skills">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold">My Skills</span>
+          <h2 class="mt-2">Technical Expertise</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="progress-card">
+              <div class="circular-progress html-css">
+                <div class="progress-value">90%</div>
+              </div>
+              <h4 class="mt-4">HTML/CSS</h4>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="progress-card">
+              <div class="circular-progress javascript">
+                <div class="progress-value">75%</div>
+              </div>
+              <h4 class="mt-4">JavaScript</h4>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="progress-card">
+              <div class="circular-progress reactjs">
+                <div class="progress-value">65%</div>
+              </div>
+              <h4 class="mt-4">React.js</h4>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="progress-card">
+              <div class="circular-progress python">
+                <div class="progress-value">80%</div>
+              </div>
+              <h4 class="mt-4">Python</h4>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="progress-card">
+              <div class="circular-progress datascience">
+                <div class="progress-value">80%</div>
+              </div>
+              <h4 class="mt-4">Data Science</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skills section ends -->
+
+    <!-- portfolio section starts -->
+    <section class="portfolio py-5" id="portfolio">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold">My Work</span>
+          <h2 class="mt-2">Recent Projects</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="portfolio-item">
+              <img src="images/bank.png" alt="Banking System" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div>
+                  <h4 class="text-white">Banking System</h4>
+                  <p class="text-white-50">Python, Flask, HTML, CSS</p>
+                  <a href="https://github.com/Mursaleen-4/Bank-Project" target="_blank" class="c-btn btn-sm">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item">
+              <img src="images/ep.png" alt="E-Commerce Platform" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div>
+                  <h4 class="text-white">E-Commerce Platform</h4>
+                  <p class="text-white-50">Html, Css, JavaScript</p>
+                  <a href="https://github.com/Mursaleen-4/Event-Management" target="_blank" class="c-btn btn-sm">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-item">
+              <img src="images/Hw.png" alt="Home Appliances Website" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div>
+                  <h4 class="text-white">Home Appliances website</h4>
+                  <p class="text-white-50">Html, Css, JavaScript</p>
+                  <a href="https://github.com/yourusername/health-wellness" target="_blank" class="c-btn btn-sm">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="portfolio-item">
+              <img src="images/cc.png" alt="Currency Converter" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div>
+                  <h4 class="text-white">Currency Converter</h4>
+                  <p class="text-white-50">Html, Css, JavaScript</p>
+                  <a href="https://github.com/Mursaleen-4/Currency-Converter" target="_blank" class="c-btn btn-sm">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item">
+              <img src="images/entry.png" alt="Entry Test" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div>
+                  <h4 class="text-white">Entry Test</h4>
+                  <p class="text-white-50">ReactJS,Firebase</p>
+                  <a href="https://github.com/Mursaleen-4/Entry-Test" target="_blank" class="c-btn btn-sm">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-item">
+              <img src="images/stream.png" alt="Data Science Streamlit" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div>
+                  <h4 class="text-white">Space-X Data Analysis</h4>
+                  <p class="text-white-50">Python, Streamlit</p>
+                  <a href="https://github.com/Mursaleen-4/SMIT-hackaton-project-" target="_blank" class="c-btn btn-sm">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio section ends -->
+
+    <!-- testimonials section starts -->
+    <section class="testimonials py-5" id="testimonial">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold">Testimonials</span>
+          <h2 class="mt-2">What Clients Say</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"Mursaleen's expertise in web development is exceptional. He delivered our e-commerce platform on time and exceeded our expectations with his attention to detail."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images/male.jpeg" alt="Mr.Ramesh" class="rounded-circle">
+                <div>
+                  <h5>Mr.Ramesh</h5>
+                  <p class="text-muted">HOD, DUET.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"Working with Mursaleen on our data analysis project was a great experience. His Python skills and analytical thinking helped us gain valuable insights."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images/female.png" alt="Ms.Saima" class="rounded-circle">
+                <div>
+                  <h5>Ms.Saima</h5>
+                  <p class="text-muted">Professor, DUET</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"The React application Mursaleen developed for us is fast, responsive, and user-friendly. His technical knowledge and problem-solving skills are impressive."</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images/male.jpeg" alt="Mr.Mannan" class="rounded-circle">
+                <div>
+                  <h5>Mr.Mannan</h5>
+                  <p class="text-muted">Professor, DUET</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonials section ends -->
+
+    <!-- contact section starts -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold">Get In Touch</span>
+          <h2 class="mt-2">Contact Me</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="contact-form">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Your Name" required />
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email" required />
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="c-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="contact-details">
+              <div class="d-flex align-items-center mb-4">
+                <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+                <p class="ms-3 mb-0">Karachi,Sindh,Pakistan</p>
+              </div>
+              <div class="d-flex align-items-center mb-4">
+                <i class="bi bi-envelope-fill text-primary fs-4"></i>
+                <p class="ms-3 mb-0">makbaloch4@gmail.com</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-telephone-fill text-primary fs-4"></i>
+                <p class="ms-3 mb-0">+92 334 061 6221</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section ends -->
+
+    <!-- footer starts -->
+    <footer class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h4 class="text-white mb-4">Portfolio</h4>
+            <p class="text-muted">
+              A showcase of my work and skills in web development, 
+              React applications, and Python development.
+            </p>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <h4 class="text-white mb-4">Connect With Me</h4>
+            <div class="social-links">
+              <a href="https://github.com/Mursaleen-4" target="_blank" rel="noopener noreferrer" class="c-btn btn-sm">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/mursaleen-khoso/" target="_blank" rel="noopener noreferrer" class="c-btn btn-sm">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <p class="text-muted mb-0">
+            © 2024 Mursaleen Amanullah. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer ends -->
+
+    <!-- back to top button -->
+    <button id="btn-back-to-top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- bootstrap js cdn link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS js cdn link -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+
+    <!-- custom js file -->
+    <script src="script/script.js"></script>
+  </body>
+</html>
+
