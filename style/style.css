@@ -94,6 +94,7 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  text-decoration: none;
 }
 
 .c-btn::before {
@@ -514,12 +515,38 @@ footer::before {
 }
 
 /* Responsive Design */
+@media (max-width: 991px) {
+  .home {
+    padding: 6rem 0;
+  }
+
+  .home h2 {
+    font-size: 3.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+  }
+
+  .service-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-details {
+    margin-top: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .home {
+    padding: 4rem 0;
+  }
+
   .home h2 {
     font-size: 3rem;
   }
   
-  .home p {
+  .intro-text {
     font-size: 1.1rem;
   }
   
@@ -540,6 +567,27 @@ footer::before {
     height: 120px;
     width: 120px;
   }
+
+  .portfolio-item img {
+    height: 250px;
+  }
+
+  .testimonial-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
 }
 
 @media (max-width: 576px) {
@@ -553,6 +601,7 @@ footer::before {
   
   .c-btn {
     padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
   
   .service-card {
@@ -561,5 +610,58 @@ footer::before {
   
   .testimonial-card {
     padding: 1.5rem;
+  }
+
+  .portfolio-item img {
+    height: 200px;
+  }
+
+  .circular-progress {
+    height: 120px;
+    width: 120px;
+  }
+
+  .circular-progress::before {
+    height: 100px;
+    width: 100px;
+  }
+
+  .progress-value {
+    font-size: 1.5rem;
+  }
+
+  .key-skills {
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form .form-control {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Fix for mobile menu */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: var(--glass-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.8rem 1rem;
+  }
+
+  .c-btn.ms-4 {
+    margin-left: 0 !important;
+    margin-top: 1rem;
+    display: block !important;
+    text-align: center;
   }
 }
