@@ -232,26 +232,33 @@ if (contactForm) {
 const progressBars = document.querySelectorAll('.circular-progress');
 const progressValues = {
   'html-css': 90,
+  'typescript': 75,
   'javascript': 75,
-  'reactjs': 65,
+  'reactjs': 70,
   'python': 80,
+  'database': 80,
   'datascience': 80
 };
 
 progressBars.forEach(bar => {
-  const skill = bar.classList[1];
+  const skillClasses = Array.from(bar.classList).filter(cls => cls !== 'circular-progress');
+  let skill = skillClasses[0];
+  if (skill === 'html-css') skill = 'html-css';
+  else if (skill === 'typescript') skill = 'typescript';
+  else if (skill === 'javascript') skill = 'javascript';
+  else if (skill === 'reactjs') skill = 'reactjs';
+  else if (skill === 'python') skill = 'python';
+  else if (skill === 'database') skill = 'database';
+  else if (skill === 'datascience') skill = 'datascience';
   const value = progressValues[skill];
   const progressValue = bar.querySelector('.progress-value');
-  
   let startValue = 0;
   const endValue = value;
   const speed = 30;
-  
   const progress = setInterval(() => {
     startValue++;
     progressValue.textContent = `${startValue}%`;
     bar.style.background = `conic-gradient(var(--primary) ${startValue * 3.6}deg, #f1f5f9 0deg)`;
-    
     if (startValue === endValue) {
       clearInterval(progress);
     }

@@ -20,7 +20,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--text-primary);
-  background-color: var(--light);
+  background: url('/images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -121,26 +122,13 @@ body {
 
 /* Home Section */
 .home {
-  background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.9) 100%);
   padding: 8rem 0;
   position: relative;
   overflow: hidden;
 }
 
 .home::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234f46e5' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  animation: patternMove 20s linear infinite;
-}
-
-@keyframes patternMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 100px 100px; }
+  content: none;
 }
 
 .home h2 {
@@ -203,16 +191,48 @@ body {
   color: white;
 }
 
-.home img {
-  border-radius: 1.5rem;
-  box-shadow: var(--glass-shadow);
-  transition: all 0.4s ease;
-  max-width: 90%;
-  margin-left: auto;
+.home-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
 }
 
-.home img:hover {
-  transform: scale(1.02);
+.home-img-wrapper img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 8px 32px 0 rgba(79, 70, 229, 0.22), 0 2rem 4rem rgba(0,0,0,0.13);
+  border: 6px solid transparent;
+  background: rgba(255,255,255,0.10);
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s cubic-bezier(.4,2,.6,1);
+  position: relative;
+  z-index: 2;
+}
+
+.home-img-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -8px; left: -8px; right: -8px; bottom: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5, #f97316, #7c3aed);
+  z-index: 1;
+  filter: blur(2px) brightness(1.1);
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.home-img-wrapper:hover img {
+  transform: scale(1.04);
+  box-shadow: 0 12px 40px 0 rgba(79, 70, 229, 0.28), 0 2.5rem 5rem rgba(0,0,0,0.18);
+}
+
+.home-img-wrapper:hover::before {
+  opacity: 1;
 }
 
 .c-orange {
@@ -222,12 +242,16 @@ body {
 
 /* Service Cards */
 .service-card {
-  background: var(--glass-bg);
+  background: #e0e7ff;
   border-radius: 1.5rem;
   padding: 2.5rem;
   transition: all 0.4s ease;
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .service-card:hover {
@@ -252,10 +276,11 @@ body {
 }
 
 .service-card .img img {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
 
 .service-card:hover .img img {
@@ -271,23 +296,24 @@ body {
 }
 
 .service-card p {
-  color: var(--gray);
-  font-size: 1rem;
-  line-height: 1.7;
+  flex-grow: unset;
+  overflow: unset;
+  text-overflow: unset;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  max-height: unset;
 }
 
 /* Skills Section */
 .skill {
-  background: white;
-  padding: 6rem 0;
-  position: relative;
-  overflow: hidden;
+  padding: 3.5rem 0;
 }
 
 .progress-card {
-  background: var(--glass-bg);
+  background: #e0e7ff;
   border-radius: 1.5rem;
-  padding: 2.5rem;
+  padding: 1.5rem;
   box-shadow: var(--glass-shadow);
   transition: all 0.4s ease;
   border: 1px solid var(--glass-border);
@@ -300,8 +326,8 @@ body {
 
 .circular-progress {
   position: relative;
-  height: 180px;
-  width: 180px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   background: conic-gradient(var(--primary) 3.6deg, #f1f5f9 0deg);
   display: flex;
@@ -317,8 +343,8 @@ body {
 .circular-progress::before {
   content: "";
   position: absolute;
-  height: 150px;
-  width: 150px;
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
   background-color: white;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
@@ -326,7 +352,7 @@ body {
 
 .progress-value {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary);
   font-family: 'Space Grotesk', sans-serif;
@@ -347,9 +373,10 @@ body {
 
 .portfolio-item img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  transition: all 0.4s ease;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
 }
 
 .portfolio-overlay {
@@ -372,7 +399,7 @@ body {
 
 /* Testimonials Section */
 .testimonial-card {
-  background: var(--glass-bg);
+  background: #e0e7ff;
   border-radius: 1.5rem;
   padding: 2.5rem;
   transition: all 0.4s ease;
@@ -420,13 +447,12 @@ body {
 
 /* Contact Section */
 .contact {
-  background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.9) 100%);
   padding: 6rem 0;
   position: relative;
 }
 
 .contact-form .form-control {
-  background: var(--glass-bg);
+  background: #f5f7ff;
   border: 1px solid var(--glass-border);
   border-radius: 1rem;
   padding: 1rem 1.5rem;
@@ -436,6 +462,11 @@ body {
 .contact-form .form-control:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
   border-color: var(--primary);
+}
+
+.contact-form .form-control::placeholder {
+  color: #6b7280;
+  opacity: 1;
 }
 
 /* Footer */
@@ -663,5 +694,24 @@ footer::before {
     margin-top: 1rem;
     display: block !important;
     text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .expertise .row.row-cols-xl-5 {
+    flex-wrap: wrap;
+  }
+  .expertise .col {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .expertise .service-card {
+    padding: 1.1rem 0.6rem;
+    min-width: 0;
+    font-size: 0.93rem;
+  }
+  .expertise .service-card .img img {
+    width: 40px;
+    height: 40px;
   }
 }
