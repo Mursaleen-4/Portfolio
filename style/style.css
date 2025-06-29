@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 291px) {
   body {
     background-attachment: scroll;
   }
