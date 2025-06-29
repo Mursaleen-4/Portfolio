@@ -156,7 +156,8 @@ body {
 
 .intro-text {
   font-size: 1.4rem;
-  color: var(--text-secondary);
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
   max-width: 600px;
   margin-bottom: 2.5rem;
   animation: fadeInUp 1s ease 0.2s backwards;
