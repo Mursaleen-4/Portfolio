@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 291px) {
+@media (max-width: 600px) {
   body {
     background-attachment: scroll;
   }
@@ -481,7 +481,9 @@ body {
   color: #6b7280;
   opacity: 1;
 }
-
+.contact-details {
+  color: #fff !important;
+}
 /* Footer */
 footer {
   background: var(--dark);
