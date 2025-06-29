@@ -17,19 +17,27 @@
 }
 
 /* Base Styles */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--text-primary);
   background: url('/images/bg.jpg') no-repeat center center fixed;
+  background-repeat: no-repeat;
   background-size: cover;
   line-height: 1.6;
   overflow-x: hidden;
 }
-@media(max-width:291px){
+
+@media (max-width: 991px) {
   body {
     background-attachment: scroll;
   }
 }
+
 /* Navbar Styling */
 .navbar {
   backdrop-filter: blur(10px);
