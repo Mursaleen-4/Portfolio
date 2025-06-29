@@ -25,7 +25,11 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-
+@media(max-width:291px){
+  body {
+    background-attachment: scroll;
+  }
+}
 /* Navbar Styling */
 .navbar {
   backdrop-filter: blur(10px);
