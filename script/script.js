@@ -6,18 +6,18 @@ let htmlStartValue = 0,
   htmlEndValue = 90,
   htmlspeed = 30;
 
-let progresshtml = setInterval(() => {
-  htmlStartValue++;
-
-  htmlValue.textContent = `${htmlStartValue}%`;
-  htmlProgress.style.background = `conic-gradient(#fca61f ${
-    htmlStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (htmlStartValue == htmlEndValue) {
-    clearInterval(progresshtml);
-  }
-}, htmlspeed);
+if (htmlProgress && htmlValue) {
+  let progresshtml = setInterval(() => {
+    htmlStartValue++;
+    htmlValue.textContent = `${htmlStartValue}%`;
+    htmlProgress.style.background = `conic-gradient(#fca61f ${
+      htmlStartValue * 3.6
+    }deg, #ededed 0deg)`;
+    if (htmlStartValue == htmlEndValue) {
+      clearInterval(progresshtml);
+    }
+  }, htmlspeed);
+}
 
 // javasript progress circular bar 
 let javascriptProgress = document.querySelector(".javascript"),
@@ -27,18 +27,18 @@ let javascriptStartValue = 0,
   javascriptEndValue = 75,
   jsspeed = 30;
 
-let progressjs = setInterval(() => {
-  javascriptStartValue++;
-
-  javascriptValue.textContent = `${javascriptStartValue}%`;
-  javascriptProgress.style.background = `conic-gradient(#7d2ae8 ${
-    javascriptStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (javascriptStartValue == javascriptEndValue) {
-    clearInterval(progressjs);
-  }
-}, jsspeed);
+if (javascriptProgress && javascriptValue) {
+  let progressjs = setInterval(() => {
+    javascriptStartValue++;
+    javascriptValue.textContent = `${javascriptStartValue}%`;
+    javascriptProgress.style.background = `conic-gradient(#7d2ae8 ${
+      javascriptStartValue * 3.6
+    }deg, #ededed 0deg)`;
+    if (javascriptStartValue == javascriptEndValue) {
+      clearInterval(progressjs);
+    }
+  }, jsspeed);
+}
 
 // php progress circular bar 
 let phpProgress = document.querySelector(".php"),
@@ -48,18 +48,18 @@ let phpStartValue = 0,
   phpEndValue = 80,
   phpspeed = 30;
 
-let progressphp = setInterval(() => {
-  phpStartValue++;
-
-  phpValue.textContent = `${phpStartValue}%`;
-  phpProgress.style.background = `conic-gradient(#20c997 ${
-    phpStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (phpStartValue == phpEndValue) {
-    clearInterval(progressphp);
-  }
-}, phpspeed);
+if (phpProgress && phpValue) {
+  let progressphp = setInterval(() => {
+    phpStartValue++;
+    phpValue.textContent = `${phpStartValue}%`;
+    phpProgress.style.background = `conic-gradient(#20c997 ${
+      phpStartValue * 3.6
+    }deg, #ededed 0deg)`;
+    if (phpStartValue == phpEndValue) {
+      clearInterval(progressphp);
+    }
+  }, phpspeed);
+}
 
 // reactjs progress circular bar 
 let reactProgress = document.querySelector(".reactjs"),
@@ -69,18 +69,18 @@ let reactStartValue = 0,
   reactEndValue = 30,
   rjsspeed = 30;
 
-let progressreact = setInterval(() => {
-  reactStartValue++;
-
-  reactValue.textContent = `${reactStartValue}%`;
-  reactProgress.style.background = `conic-gradient(#3f396d ${
-    reactStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (reactStartValue == reactEndValue) {
-    clearInterval(progressreact);
-  }
-}, rjsspeed);
+if (reactProgress && reactValue) {
+  let progressreact = setInterval(() => {
+    reactStartValue++;
+    reactValue.textContent = `${reactStartValue}%`;
+    reactProgress.style.background = `conic-gradient(#3f396d ${
+      reactStartValue * 3.6
+    }deg, #ededed 0deg)`;
+    if (reactStartValue == reactEndValue) {
+      clearInterval(progressreact);
+    }
+  }, rjsspeed);
+}
 
 
 // filter using javascript
@@ -302,87 +302,3 @@ if (mainHeading) {
   
   headingObserver.observe(mainHeading);
 }
-
-// Blog content data
-const blogContent = {
-  'web-dev': {
-    title: 'Modern Web Development Trends in 2024',
-    content: `
-      <p>In the ever-evolving landscape of web development, 2024 brings exciting new trends and technologies that are reshaping how we build and interact with web applications. Let's explore some of the most significant developments:</p>
-      
-      <h5>1. AI-Powered Development</h5>
-      <p>Artificial Intelligence is revolutionizing web development through tools like GitHub Copilot and automated testing frameworks. Developers can now leverage AI to write code, debug issues, and optimize performance.</p>
-      
-      <h5>2. Advanced CSS Techniques</h5>
-      <p>Modern CSS features like Container Queries, CSS Grid, and Custom Properties are enabling more flexible and maintainable layouts. These tools allow for better responsive design and component-based styling.</p>
-      
-      <h5>3. Web Components</h5>
-      <p>The adoption of Web Components continues to grow, providing a standardized way to create reusable custom elements. This trend promotes better code organization and maintainability.</p>
-    `,
-    author: 'Full Stack Developer',
-    date: 'March 15, 2024',
-    readTime: '5 min read'
-  },
-  'machine-learning': {
-    title: 'Getting Started with Machine Learning',
-    content: `
-      <p>Machine Learning is transforming industries and creating new opportunities for developers and data scientists. Here's a comprehensive guide to help you get started:</p>
-      
-      <h5>1. Understanding the Basics</h5>
-      <p>Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn from and make decisions based on data. It's essential to understand fundamental concepts like supervised and unsupervised learning.</p>
-      
-      <h5>2. Essential Tools and Libraries</h5>
-      <p>Python is the primary language for ML development, with powerful libraries like TensorFlow, PyTorch, and scikit-learn. These tools provide the building blocks for creating and training ML models.</p>
-      
-      <h5>3. Practical Applications</h5>
-      <p>From image recognition to natural language processing, ML has numerous applications. Understanding these use cases helps in choosing the right approach for your projects.</p>
-    `,
-    author: 'Data Scientist',
-    date: 'March 10, 2024',
-    readTime: '7 min read'
-  },
-  'react-patterns': {
-    title: 'Advanced React Patterns',
-    content: `
-      <p>React continues to evolve, bringing new patterns and best practices for building scalable applications. Let's explore some advanced concepts:</p>
-      
-      <h5>1. Custom Hooks</h5>
-      <p>Custom hooks allow you to extract component logic into reusable functions. They're a powerful way to share stateful logic between components while keeping your code DRY.</p>
-      
-      <h5>2. Context API</h5>
-      <p>The Context API provides a way to pass data through the component tree without manually passing props. It's perfect for managing global state and theme settings.</p>
-      
-      <h5>3. Performance Optimization</h5>
-      <p>Understanding React's rendering behavior and using tools like React.memo, useMemo, and useCallback can significantly improve your application's performance.</p>
-    `,
-    author: 'React Developer',
-    date: 'March 5, 2024',
-    readTime: '6 min read'
-  }
-};
-
-// Blog expansion functionality
-document.querySelectorAll('.read-more-btn').forEach(button => {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    const modalId = this.getAttribute('data-bs-target');
-    const modal = new bootstrap.Modal(document.querySelector(modalId));
-    modal.show();
-  });
-});
-
-// Handle blog comment form submission
-document.querySelectorAll('.contact-form button').forEach(button => {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    // Get the modal
-    const modal = this.closest('.modal');
-    
-    // Hide the modal
-    const modalInstance = bootstrap.Modal.getInstance(modal);
-    if (modalInstance) {
-      modalInstance.hide();
-    }
-  });
-});
