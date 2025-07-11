@@ -14,6 +14,14 @@
   --glass-bg: rgba(255, 255, 255, 0.8);
   --glass-border: rgba(255, 255, 255, 0.2);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  /* Dark palette from React reference */
+  --primary-dark: #050816;
+  --secondary-dark: #aaa6c3;
+  --tertiary-dark: #151030;
+  --black-100: #100d25;
+  --black-200: #090325;
+  --white-100: #f3f3f3;
+  --card-shadow-dark: 0px 35px 120px -15px #211e35;
 }
 
 /* Base Styles */
@@ -32,7 +40,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 991px) {
   body {
     background-attachment: scroll;
   }
@@ -41,16 +49,16 @@ body {
 /* Navbar Styling */
 .navbar {
   backdrop-filter: blur(10px);
-  background: var(--glass-bg) !important;
-  box-shadow: var(--glass-shadow);
-  border-bottom: 1px solid var(--glass-border);
+  background: var(--primary-dark) !important;
+  box-shadow: var(--card-shadow-dark);
+  border-bottom: 1px solid var(--black-100);
   padding: 1rem 0;
 }
 
 .navbar-brand {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  color: var(--primary) !important;
+  color: #fff !important;
   font-size: 1.8rem;
   letter-spacing: -0.5px;
 }
@@ -68,7 +76,7 @@ body {
 }
 
 .navbar-nav a {
-  color: var(--dark);
+  color: #fff !important;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -76,7 +84,7 @@ body {
 }
 
 .navbar-nav a:hover {
-  color: var(--primary);
+  color: var(--secondary-dark) !important;
 }
 
 .navbar-nav a::after {
@@ -97,8 +105,8 @@ body {
 
 /* Button Styling */
 .c-btn {
-  background: var(--gradient);
-  color: white;
+  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+  color: #fff;
   border: none;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -125,7 +133,7 @@ body {
 .c-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-  color: white;
+  color: #fff;
 }
 
 .c-btn:hover::before {
@@ -186,22 +194,22 @@ body {
 }
 
 .skill-tag {
-  background: var(--glass-bg);
-  color: var(--primary);
+  background: var(--black-100);
+  color: #fff;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   font-weight: 500;
   font-size: 1.1rem;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--black-200);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--glass-shadow);
   background: var(--gradient);
-  color: white;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-dark);
 }
 
 .home-img-wrapper {
@@ -255,16 +263,18 @@ body {
 
 /* Service Cards */
 .service-card {
-  background: #e0e7ff;
+  background: var(--tertiary-dark);
   border-radius: 1.5rem;
   padding: 2.5rem;
   transition: all 0.4s ease;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--black-100);
   backdrop-filter: blur(10px);
   min-height: 370px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  color: #fff;
+  box-shadow: var(--card-shadow-dark);
 }
 
 .service-card:hover {
@@ -304,7 +314,7 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--dark);
+  color: #fff;
   font-size: 1.4rem;
 }
 
@@ -316,6 +326,7 @@ body {
   -webkit-line-clamp: unset;
   -webkit-box-orient: unset;
   max-height: unset;
+  color: var(--secondary-dark);
 }
 
 /* Skills Section */
@@ -324,13 +335,14 @@ body {
 }
 
 .progress-card {
-  background: #e0e7ff;
+  background: var(--black-100);
   border-radius: 1.5rem;
   padding: 1.5rem;
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--card-shadow-dark);
   transition: all 0.4s ease;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--black-200);
   backdrop-filter: blur(10px);
+  color: #fff;
 }
 
 .progress-card:hover {
@@ -367,7 +379,7 @@ body {
   position: relative;
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--secondary-dark);
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -412,12 +424,14 @@ body {
 
 /* Testimonials Section */
 .testimonial-card {
-  background: #e0e7ff;
+  background: var(--tertiary-dark);
   border-radius: 1.5rem;
   padding: 2.5rem;
   transition: all 0.4s ease;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--black-100);
   backdrop-filter: blur(10px);
+  color: #fff;
+  box-shadow: var(--card-shadow-dark);
 }
 
 .testimonial-card:hover {
@@ -428,9 +442,10 @@ body {
 .testimonial-content {
   position: relative;
   padding: 1.5rem;
-  background: white;
+  background: var(--black-100);
   border-radius: 1rem;
   margin-bottom: 1.5rem;
+  color: #fff;
 }
 
 .testimonial-content::before {
@@ -439,7 +454,7 @@ body {
   top: -20px;
   left: 20px;
   font-size: 4rem;
-  color: var(--primary);
+  color: var(--secondary-dark);
   opacity: 0.2;
   font-family: serif;
 }
@@ -465,11 +480,12 @@ body {
 }
 
 .contact-form .form-control {
-  background: #f5f7ff;
-  border: 1px solid var(--glass-border);
+  background: var(--black-200);
+  border: 1px solid var(--black-100);
   border-radius: 1rem;
   padding: 1rem 1.5rem;
   transition: all 0.3s ease;
+  color: #fff;
 }
 
 .contact-form .form-control:focus {
@@ -478,17 +494,19 @@ body {
 }
 
 .contact-form .form-control::placeholder {
-  color: #6b7280;
+  color: var(--secondary-dark);
   opacity: 1;
 }
+
 .contact-details {
   color: #fff !important;
 }
+
 /* Footer */
 footer {
-  background: var(--dark);
-  color: var(--light);
-  padding: 5rem 0 2rem;
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 0.5rem 0 0.2rem;
   position: relative;
   overflow: hidden;
 }
