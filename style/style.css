@@ -40,7 +40,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 600px) {
   body {
     background-attachment: scroll;
   }
